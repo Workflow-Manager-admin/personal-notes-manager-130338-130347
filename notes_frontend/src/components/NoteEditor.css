@@ -1,0 +1,113 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(33, 33, 33, 0.18);
+  z-index: 1010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.note-editor-modal {
+  background: #fff;
+  padding: 24px 18px 15px 18px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px 0 #1976d230;
+  min-width: 320px;
+  max-width: 95vw;
+  width: 400px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.note-editor-modal h2 {
+  font-size: 1.23rem;
+  color: #1976d2;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.note-title-input {
+  width: 100%;
+  border: 1px solid #ececec;
+  border-radius: 7px;
+  padding: 6px 10px;
+  margin-bottom: 8px;
+  font-size: 1.07rem;
+  font-weight: 540;
+  color: #1976d2;
+  background: #fafbff;
+  transition: border .17s;
+  outline: none;
+}
+
+.note-title-input:focus {
+  border: 1.5px solid #1976d2;
+}
+
+.note-content-input {
+  width: 100%;
+  border: 1px solid #e8e8e8;
+  border-radius: 7px;
+  padding: 8px 12px;
+  font-size: 1.09rem;
+  min-height: 80px;
+  resize: vertical;
+  margin-bottom: 12px;
+  color: #424242;
+  font-family: inherit;
+  background: #f9f9fd;
+  outline: none;
+  transition: border .13s;
+}
+
+.note-content-input:focus {
+  border: 1.5px solid #ffca28;
+}
+
+.note-editor-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cancel-btn {
+  background: none;
+  color: #424242;
+  border: 1.3px solid #ececec;
+  border-radius: 7px;
+  font-size: 1rem;
+  padding: 5px 17px;
+  cursor: pointer;
+  transition: background .15s, border .15s;
+}
+.cancel-btn:hover, .cancel-btn:focus {
+  background: #ffca2877;
+  border: 1.8px solid #ffca28;
+}
+
+.save-btn {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 5.5px 20px;
+  cursor: pointer;
+  transition: background .16s;
+}
+.save-btn:hover, .save-btn:focus {
+  background: #1566c0;
+}
+
+.editor-error {
+  color: #ff3333;
+  font-size: 0.97rem;
+  margin-bottom: 6px;
+  margin-top: 0;
+  text-align: left;
+}
