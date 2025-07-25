@@ -5,13 +5,13 @@
   z-index: 1050;
   width: 56px;
   height: 56px;
-  background: #ffca28;
+  background: #000;
   color: #fff;
   border: none;
   border-radius: 50%;
   font-size: 2.3rem;
   font-weight: 700;
-  box-shadow: 0 4px 11px #42424233;
+  box-shadow: 0 4px 11px #8883;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -22,8 +22,8 @@
 .floating-add-btn:active,
 .floating-add-btn:focus,
 .floating-add-btn:hover {
-  background: #ffc400;
-  box-shadow: 0 7px 20px #ffca2866;
+  background: #222;
+  box-shadow: 0 7px 20px #4444;
   transform: scale(1.07);
 }
 @media (max-width: 600px) {
