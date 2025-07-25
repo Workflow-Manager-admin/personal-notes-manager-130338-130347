@@ -31,10 +31,33 @@
 
 .App {
   text-align: center;
-  background-color: var(--bg-primary);
+  /* Apply a linear monochrome gradient background, covering both light and dark themes smoothly */
+  background: linear-gradient(
+    160deg,
+    #000 0%,
+    #222 18%,
+    #555 60%,
+    #bbb 92%,
+    #fff 100%
+  );
+  background-color: var(--bg-primary); /* fallback for older browsers */
   color: var(--text-primary);
   min-height: 100vh;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background 0.6s cubic-bezier(.4,1.2,.7,1), background-color 0.3s, color 0.3s;
+}
+
+/* Dark theme: gradient goes white to black */
+[data-theme="dark"] .App {
+  background: linear-gradient(
+    200deg,
+    #fff 0%,
+    #bbb 12%,
+    #444 44%,
+    #111 86%,
+    #000 100%
+  );
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 .App-logo {
