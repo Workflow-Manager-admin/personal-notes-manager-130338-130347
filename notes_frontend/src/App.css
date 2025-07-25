@@ -31,13 +31,14 @@
 
 .App {
   text-align: center;
-  /* Apply a linear monochrome gradient background, covering both light and dark themes smoothly */
+  /* Stronger, dramatic horizontal monochrome gradient */
   background: linear-gradient(
-    160deg,
+    90deg,
     #000 0%,
+    #101010 7%,
     #222 18%,
-    #555 60%,
-    #bbb 92%,
+    #e6e6e6 83%,
+    #fff 93%,
     #fff 100%
   );
   background-color: var(--bg-primary); /* fallback for older browsers */
@@ -46,14 +47,15 @@
   transition: background 0.6s cubic-bezier(.4,1.2,.7,1), background-color 0.3s, color 0.3s;
 }
 
-/* Dark theme: gradient goes white to black */
+/* Dark theme: gradient goes white to black, also sharper */
 [data-theme="dark"] .App {
   background: linear-gradient(
-    200deg,
+    270deg,
     #fff 0%,
-    #bbb 12%,
-    #444 44%,
-    #111 86%,
+    #ededed 7%,
+    #bbbbbb 18%,
+    #222 83%,
+    #000 93%,
     #000 100%
   );
   background-color: var(--bg-primary);
