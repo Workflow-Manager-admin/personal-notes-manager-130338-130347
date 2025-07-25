@@ -1,65 +1,35 @@
 /* CSS Variables for Theme Management */
 :root {
-  /* Monochrome: black-white-gray theme */
-  --bg-primary: #fff;
-  --bg-secondary: #f5f5f5;
-  --text-primary: #000;
-  --text-secondary: #666;
-  --border-color: #ddd;
-  --button-bg: #000;
-  --button-text: #fff;
-  --accent: #000;
-  --primary: #000;
-  --secondary: #222;
-  --focus-shadow: #888; /* subtle shadow for focus */
+  /* Light theme colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #282c34;
+  --text-secondary: #424242; /* secondary from requirements */
+  --border-color: #e9ecef;
+  --button-bg: #1976d2;
+  --button-text: #ffffff;
+  --accent: #ffca28;
+  --primary: #1976d2;
+  --secondary: #424242;
 }
 
 [data-theme="dark"] {
-  /* In monochrome mode, dark theme = inverted (still minimal distinction) */
-  --bg-primary: #000;
-  --bg-secondary: #111;
-  --text-primary: #fff;
-  --text-secondary: #ccc;
-  --border-color: #333;
-  --button-bg: #fff;
-  --button-text: #000;
-  --accent: #fff;
-  --primary: #fff;
-  --secondary: #eee;
-  --focus-shadow: #444;
+  /* Dark theme colors */
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #282c34;
+  --text-primary: #ffffff;
+  --text-secondary: #61dafb;
+  --border-color: #404040;
+  --button-bg: #0056b3;
+  --button-text: #ffffff;
 }
 
 .App {
   text-align: center;
-  /* Stronger, dramatic horizontal monochrome gradient */
-  background: linear-gradient(
-    90deg,
-    #000 0%,
-    #101010 7%,
-    #222 18%,
-    #e6e6e6 83%,
-    #fff 93%,
-    #fff 100%
-  );
-  background-color: var(--bg-primary); /* fallback for older browsers */
-  color: var(--text-primary);
-  min-height: 100vh;
-  transition: background 0.6s cubic-bezier(.4,1.2,.7,1), background-color 0.3s, color 0.3s;
-}
-
-/* Dark theme: gradient goes white to black, also sharper */
-[data-theme="dark"] .App {
-  background: linear-gradient(
-    270deg,
-    #fff 0%,
-    #ededed 7%,
-    #bbbbbb 18%,
-    #222 83%,
-    #000 93%,
-    #000 100%
-  );
   background-color: var(--bg-primary);
   color: var(--text-primary);
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .App-logo {
@@ -81,7 +51,7 @@
   min-height: calc(100vh - 56px);
   padding-top: 12px;
   padding-bottom: 75px;
-  background: var(--bg-secondary);
+  background: #fafbfc;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -108,12 +78,12 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 4px var(--border-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .theme-toggle:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px var(--focus-shadow);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   opacity: 0.9;
 }
 

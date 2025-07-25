@@ -2,14 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #000;
+  background: #1976d2;
   padding: 16px 22px;
   color: #fff;
   font-size: 1.35rem;
   font-weight: 600;
   letter-spacing: 1px;
   height: 56px;
-  box-shadow: 0 2px 6px 0 #2222;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.02);
 }
 .app-title {
   font-weight: 700;
@@ -19,20 +19,21 @@
 }
 .search-bar {
   background: #fff;
-  border: 1.5px solid #ccc;
+  border: none;
   border-radius: 8px;
   font-size: 1rem;
   padding: 6px 14px;
   margin-left: auto;
-  color: #000;
+  color: #424242;
   width: 14rem;
   max-width: 50vw;
-  box-shadow: none;
+  box-shadow: 0 1px 2px rgba(25,118,210,0.04);
   outline: none;
-  transition: border 0.18s;
+  transition: box-shadow 0.18s;
 }
 .search-bar:focus {
-  border: 1.5px solid #222;
+  box-shadow: 0 3px 9px #ffca2833;
+  border: 1.5px solid #ffca28;
 }
 @media (max-width: 600px) {
   .notes-header {
